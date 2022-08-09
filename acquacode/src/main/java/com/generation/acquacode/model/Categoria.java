@@ -57,7 +57,12 @@ public class Categoria {
 	public void setMarca(String marca) {
 		this.marca = marca;
 	}
-	
-	
 
+	public List<Produto> getProduto() {
+		return produto;
+	}
+
+	public void setProduto(List<Produto> produto) {
+		this.produto = produto;
+	}
 }
