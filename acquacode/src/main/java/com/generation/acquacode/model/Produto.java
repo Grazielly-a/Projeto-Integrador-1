@@ -38,6 +38,10 @@ public class Produto {
 	@Size(min = 1, max = 4)
 	private String medida;
 	
+	@NotNull(message = "A quantidade de peças é obrigatória.")
+	private int quantidade;
+	
+
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
 	private Categoria categoria;
@@ -100,6 +104,14 @@ public class Produto {
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+	
+	public int getQuantidade() {
+		return quantidade;
+	}
+
+	public void setQuantidade(int quantidade) {
+		this.quantidade = quantidade;
 	}
 	
 }
