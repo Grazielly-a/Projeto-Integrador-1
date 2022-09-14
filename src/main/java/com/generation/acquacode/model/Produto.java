@@ -41,6 +41,8 @@ public class Produto {
 	@NotNull(message = "A quantidade de peças é obrigatória.")
 	private int quantidade;
 	
+	private String foto;
+	
 
 	@ManyToOne
 	@JsonIgnoreProperties("produto")
@@ -113,5 +115,14 @@ public class Produto {
 	public void setQuantidade(int quantidade) {
 		this.quantidade = quantidade;
 	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+	
 	
 }
